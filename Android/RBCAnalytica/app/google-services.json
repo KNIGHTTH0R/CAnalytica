@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "854631962280",
+    "firebase_url": "https://rbcanalytica.firebaseio.com",
+    "project_id": "rbcanalytica",
+    "storage_bucket": "rbcanalytica.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854631962280:android:bc18cde922d431e4f9949d",
+        "android_client_info": {
+          "package_name": "com.android.rbcanalytica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854631962280-6m4iuin4e6fgl5gq2ptrou6mn8fu0d44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMYfC3Egbnc_r7BcQkghPeE1vcni8jugY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854631962280-6m4iuin4e6fgl5gq2ptrou6mn8fu0d44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
