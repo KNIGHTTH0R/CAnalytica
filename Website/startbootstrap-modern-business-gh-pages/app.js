@@ -51,7 +51,7 @@ db.collection("twitter").get().then(function (querySnapshot) {
         var newRow = tableRef.insertRow();
         // Insert a cell in the row at index 0
         var newCell = newRow.insertCell(0);
-        var newText = document.createTextNode(doc.data().date);
+        var newText = document.createTextNode(doc.data().Date);
         newCell.appendChild(newText);
         var newCell1 = newRow.insertCell(1);
         var newText1 = document.createTextNode(doc.data().phrase);
@@ -62,5 +62,8 @@ db.collection("twitter").get().then(function (querySnapshot) {
         var newCell3 = newRow.insertCell(3);
         var newText3 = document.createTextNode(doc.data().technical);
         newCell3.appendChild(newText3);
+        var newCell4 = newRow.insertCell(4);
+        var newText4 = document.createTextNode(doc.data().location);
+        newCell4.appendChild(newText4);
     });
 });
