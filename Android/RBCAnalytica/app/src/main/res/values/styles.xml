@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- New MaterialComponents attributes. -->
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryVariant">@color/color_primary_variant</item>
@@ -17,19 +17,39 @@
         <item name="colorOnBackground">@color/color_on_background</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
         <item name="colorOnError">@color/color_on_error</item>
-        <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.MaterialComponents.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.MaterialComponents.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1
+        </item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2
+        </item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3
+        </item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2
+        </item>
         <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>
         <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
         <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
         <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
         <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
     </style>
 
 </resources>

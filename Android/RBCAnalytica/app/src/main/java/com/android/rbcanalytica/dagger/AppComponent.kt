@@ -1,8 +1,9 @@
 package com.android.rbcanalytica.dagger
 
 import com.android.rbcanalytica.MainApplication
-import com.android.rbcanalytica.ui.reviewanalysis.dagger.ReviewAnalysisFragmentModule
-import com.android.rbcanalytica.ui.reviewanalysis.dagger.ReviewAnalysisViewModelModule
+import com.android.rbcanalytica.ui.reviewanalysis.dagger.StatsFragmentModule
+import com.android.rbcanalytica.ui.reviewanalysis.dagger.PostsListFragmentModule
+import com.android.rbcanalytica.ui.reviewanalysis.dagger.PostsListViewModelModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -13,14 +14,13 @@ import javax.inject.Singleton
     modules = [
         AndroidSupportInjectionModule::class,
         ViewModelFactoryModule::class,
-        ReviewAnalysisFragmentModule::class,
-        ReviewAnalysisViewModelModule::class
-
+        PostsListFragmentModule::class,
+        PostsListViewModelModule::class,
+        StatsFragmentModule::class
     ]
 )
 @Singleton
 interface AppComponent : AndroidInjector<MainApplication> {
-
 
     override fun inject(instance: MainApplication)
 

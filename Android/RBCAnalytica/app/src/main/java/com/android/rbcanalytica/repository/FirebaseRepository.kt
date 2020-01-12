@@ -5,7 +5,7 @@ import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 
-class  AnalysisRepository  {
+class  FirebaseRepository  {
     val TAG = "FIREBASE_REPOSITORY"
     var firestoreDB = FirebaseFirestore.getInstance()
     var user = FirebaseAuth.getInstance().currentUser
