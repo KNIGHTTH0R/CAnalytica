@@ -1,17 +1,17 @@
-package com.android.rbcanalytica.ui.reviewanalysis
+package com.android.rbcanalytica.ui.twitterlist
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.android.rbcanalytica.repository.AnalysisRepository
+import com.android.rbcanalytica.repository.FirebaseRepository
 import com.android.rbcanalytica.repository.Review
 import javax.inject.Inject
 
-class ReviewAnalysisViewModel @Inject constructor() : ViewModel() {
+class TwitterListViewModel @Inject constructor() : ViewModel() {
 
-    val TAG = "FIRESTORE_VIEW_MODEL"
-    val analysisRepository = AnalysisRepository()
+    private val TAG = "FIRESTORE_VIEW_MODEL"
+    private val analysisRepository = FirebaseRepository()
     var reviews: MutableLiveData<List<Review>> = MutableLiveData()
 
     fun getReviews(): LiveData<List<Review>> {
@@ -24,7 +24,7 @@ class ReviewAnalysisViewModel @Inject constructor() : ViewModel() {
                     reviewsUpdate.add(review)
                     Log.d(TAG, "$review")
                 }
-                reviews.value  = reviewsUpdate
+                reviews.value = reviewsUpdate
             }
             .addOnFailureListener { exception ->
                 Log.d(TAG, "Error getting documents: ", exception)

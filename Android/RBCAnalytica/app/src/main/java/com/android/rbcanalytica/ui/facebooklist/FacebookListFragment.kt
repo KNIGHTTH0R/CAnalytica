@@ -1,4 +1,4 @@
-package com.android.rbcanalytica.ui.reviewanalysis
+package com.android.rbcanalytica.ui.facebooklist
 
 import android.content.Context
 import android.os.Bundle
@@ -7,20 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import com.android.rbcanalytica.R
 import com.android.rbcanalytica.dagger.ViewModelFactory
-import com.android.rbcanalytica.databinding.FragmentReviewAnalysisBinding
+import com.android.rbcanalytica.databinding.FragmentFacebookListBinding
 import com.android.rbcanalytica.repository.Review
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-class ReviewAnalysisFragment : Fragment() {
+class FacebookListFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
-    private lateinit var viewModel: ReviewAnalysisViewModel
-    private lateinit var binding: FragmentReviewAnalysisBinding
+    private lateinit var binding: FragmentFacebookListBinding
     private var reviews: List<Review> = emptyList()
 
     override fun onCreateView(
@@ -29,7 +27,7 @@ class ReviewAnalysisFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_review_analysis, container, false
+            inflater, R.layout.fragment_facebook_list, container, false
         )
         return binding.root
     }
@@ -42,17 +40,10 @@ class ReviewAnalysisFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.twitterButton.setOnClickListener { getReviews() }
 
-        viewModel = viewModelFactory.create(ReviewAnalysisViewModel::class.java)
-
-        viewModel.reviews.observe(this, Observer { reviews ->
-            reviews?.let { displayReviews(it) }
-        })
     }
 
     private fun getReviews() {
-        viewModel.getReviews()
     }
 
     private fun displayReviews(reviews: List<Review>) {
