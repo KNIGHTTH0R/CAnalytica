@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/habitFragment"
-        class = "com.android.rbcanalytica.ui.listmain.ListFragment"
+        class = "com.android.rbcanalytica.ui.socialmedia.SocialMediaFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

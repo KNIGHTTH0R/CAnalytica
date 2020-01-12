@@ -1,4 +1,4 @@
-package com.android.rbcanalytica.ui.twitterlist
+package com.android.rbcanalytica.ui.postslist
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -8,7 +8,7 @@ import com.android.rbcanalytica.repository.FirebaseRepository
 import com.android.rbcanalytica.repository.Review
 import javax.inject.Inject
 
-class TwitterListViewModel @Inject constructor() : ViewModel() {
+class PostsListViewModel @Inject constructor() : ViewModel() {
 
     private val TAG = "FIRESTORE_VIEW_MODEL"
     private val analysisRepository = FirebaseRepository()

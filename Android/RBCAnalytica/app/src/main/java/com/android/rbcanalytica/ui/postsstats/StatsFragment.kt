@@ -1,4 +1,4 @@
-package com.android.rbcanalytica.ui.facebooklist
+package com.android.rbcanalytica.ui.postsstats
 
 import android.content.Context
 import android.os.Bundle
@@ -9,16 +9,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.android.rbcanalytica.R
 import com.android.rbcanalytica.dagger.ViewModelFactory
-import com.android.rbcanalytica.databinding.FragmentFacebookListBinding
+import com.android.rbcanalytica.databinding.FragmentStatsBinding
 import com.android.rbcanalytica.repository.Review
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-class FacebookListFragment : Fragment() {
+class StatsFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
-    private lateinit var binding: FragmentFacebookListBinding
+    private lateinit var binding: FragmentStatsBinding
     private var reviews: List<Review> = emptyList()
 
     override fun onCreateView(
@@ -27,7 +27,7 @@ class FacebookListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_facebook_list, container, false
+            inflater, R.layout.fragment_stats, container, false
         )
         return binding.root
     }

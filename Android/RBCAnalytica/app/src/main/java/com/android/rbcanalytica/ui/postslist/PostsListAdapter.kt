@@ -1,19 +1,18 @@
-package com.android.rbcanalytica.ui.twitterlist
+package com.android.rbcanalytica.ui.postslist
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.android.rbcanalytica.R
 import com.android.rbcanalytica.repository.Review
 import com.google.android.material.chip.Chip
 
-class TwitterListAdapter internal constructor(
+class PostsListAdapter internal constructor(
     context: Context
-) : RecyclerView.Adapter<TwitterListAdapter.ReviewViewHolder>() {
+) : RecyclerView.Adapter<PostsListAdapter.ReviewViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var reviews = emptyList<Review>() // Cached copy of words

@@ -1,4 +1,4 @@
-package com.android.rbcanalytica.ui.twitterlist
+package com.android.rbcanalytica.ui.postslist
 
 import android.content.Context
 import android.os.Bundle
@@ -13,18 +13,18 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.rbcanalytica.R
 import com.android.rbcanalytica.dagger.ViewModelFactory
-import com.android.rbcanalytica.databinding.FragmentTwitterListBinding
+import com.android.rbcanalytica.databinding.FragmentPostsListBinding
 import com.android.rbcanalytica.repository.Review
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-class TwitterListFragment : Fragment() {
+class PostsListFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
-    private lateinit var viewModel: TwitterListViewModel
-    private lateinit var binding: FragmentTwitterListBinding
-    private lateinit var adapter: TwitterListAdapter
+    private lateinit var viewModel: PostsListViewModel
+    private lateinit var binding: FragmentPostsListBinding
+    private lateinit var adapter: PostsListAdapter
     private var reviews: List<Review> = emptyList()
 
     override fun onCreateView(
@@ -33,7 +33,7 @@ class TwitterListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_twitter_list, container, false
+            inflater, R.layout.fragment_posts_list, container, false
         )
         return binding.root
     }
@@ -48,13 +48,13 @@ class TwitterListFragment : Fragment() {
 
         //binding.twitterButton.setOnClickListener { getReviews() }
 
-        viewModel = viewModelFactory.create(TwitterListViewModel::class.java)
+        viewModel = viewModelFactory.create(PostsListViewModel::class.java)
 
         viewModel.reviews.observe(this, Observer { reviews ->
             reviews?.let { displayReviews(it) }
         })
 
-        adapter = TwitterListAdapter(requireContext())
+        adapter = PostsListAdapter(requireContext())
         val postRecyclerView = binding.recyclerView
         postRecyclerView.adapter = adapter
         postRecyclerView.layoutManager = LinearLayoutManager(requireContext())

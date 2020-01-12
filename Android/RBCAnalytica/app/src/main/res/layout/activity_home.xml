@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".HomeActivity">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:gravity="center"
+            android:text="#tag"
+            android:textColor="#575757"
+            android:textSize="32sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/prompt"
+            android:text="Choose the media platform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:textAlignment="center"
+            android:textColor="#575757"
+            android:textSize="32sp"
+            android:fontFamily="@font/montserratalternates_semibold"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/facebookButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_margin="12dp"
+            android:text="FB"
+            app:cornerRadius="10dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/twitterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_margin="12dp"
+            android:text="Twitter"
+            app:cornerRadius="10dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/redditButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_margin="12dp"
+            android:background="#FFFFFF"
+            android:text="Reddit"
+            app:cornerRadius="10dp"/>
+
+    </LinearLayout>
+</layout>

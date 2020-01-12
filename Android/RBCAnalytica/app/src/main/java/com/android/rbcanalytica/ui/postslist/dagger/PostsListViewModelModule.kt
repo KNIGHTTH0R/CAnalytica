@@ -2,17 +2,17 @@ package com.android.rbcanalytica.ui.reviewanalysis.dagger
 
 import androidx.lifecycle.ViewModel
 import com.android.rbcanalytica.dagger.ViewModelKey
-import com.android.rbcanalytica.ui.twitterlist.TwitterListViewModel
+import com.android.rbcanalytica.ui.postslist.PostsListViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
 @Module
-interface TwitterListViewModelModule {
+interface PostsListViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(TwitterListViewModel::class)
-    fun bindsReivewAnalysisViewModel(twitterListViewModel: TwitterListViewModel) : ViewModel
+    @ViewModelKey(PostsListViewModel::class)
+    fun bindsReivewAnalysisViewModel(postsListViewModel: PostsListViewModel) : ViewModel
 
 }
