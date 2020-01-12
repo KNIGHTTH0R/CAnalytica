@@ -46,13 +46,7 @@ class PostsListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //binding.twitterButton.setOnClickListener { getReviews() }
-
         viewModel = viewModelFactory.create(PostsListViewModel::class.java)
-
-        viewModel.reviews.observe(this, Observer { reviews ->
-            reviews?.let { displayReviews(it) }
-        })
 
         adapter = PostsListAdapter(requireContext())
         val postRecyclerView = binding.recyclerView
