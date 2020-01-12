@@ -49,6 +49,15 @@
                 android:checkable="false"
                 android:text="Technical" />
 
+            <com.google.android.material.chip.Chip
+                android:id="@+id/locationChip"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:checkable="false"
+                android:text="Toronto" />
+
         </com.google.android.material.chip.ChipGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

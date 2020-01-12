@@ -21,6 +21,7 @@ class PostsListAdapter internal constructor(
         val postItemContent: TextView = itemView.findViewById(R.id.postContent)
         val postItemPositive: Chip = itemView.findViewById(R.id.positiveChip)
         val postItemTechnical: Chip = itemView.findViewById(R.id.technicalChip)
+        val postItemLocation: Chip = itemView.findViewById(R.id.locationChip)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
@@ -42,6 +43,13 @@ class PostsListAdapter internal constructor(
         }else{
             holder.postItemTechnical.text = "Non Technical"
         }
+
+        holder.postItemLocation.text = post.location.split(",")[0]
+        if(post.location == ""){
+            holder.postItemLocation.visibility = View.INVISIBLE
+        }
+
+
     }
 
     internal fun setReviews(reviews: List<Review>) {

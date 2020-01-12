@@ -21,7 +21,12 @@ data class Review(
 
     @get:PropertyName("Date")
     @set:PropertyName("Date")
-    var date: Date = Date(0)
+    var date: Date = Date(0),
+
+
+    @get:PropertyName("location")
+    @set:PropertyName("location")
+    var location: String = ""
 
 ) {
     override fun toString(): String {

@@ -13,6 +13,9 @@ class HomeActivity : AppCompatActivity() {
         facebookButton.setOnClickListener { navigateToFacebookScreen() }
         twitterButton.setOnClickListener { navigateToTwitterScreen() }
         redditButton.setOnClickListener { navigateToRedditScreen() }
+
+        tag.text = intent.getStringExtra("EXTRA_HASHTAG")
+        DbConstants.HASHTAG = intent.getStringExtra("EXTRA_HASHTAG")
     }
 
     private fun navigateToRedditScreen() {

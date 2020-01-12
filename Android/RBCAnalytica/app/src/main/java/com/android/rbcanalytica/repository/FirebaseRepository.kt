@@ -4,7 +4,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 
-
 class  FirebaseRepository  {
     val TAG = "FIREBASE_REPOSITORY"
     var firestoreDB = FirebaseFirestore.getInstance()
@@ -12,5 +11,9 @@ class  FirebaseRepository  {
 
     fun getTwitterResults() : CollectionReference{
         return firestoreDB.collection("twitter")
+    }
+
+    fun postHashtag(hashtag:String){
+        firestoreDB.collection("application").document("zK4OS4dCy8XXvFDP2jAV").update("hashTagName",hashtag)
     }
 }
